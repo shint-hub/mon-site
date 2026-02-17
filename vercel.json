@@ -1,0 +1,34 @@
+{
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
+}
+```
+
+5. **Sauvegarde** le fichier (Ctrl + S)
+
+### 3️⃣ Push sur GitHub
+
+1. Ouvre **GitHub Desktop**
+2. Tu devrais voir `vercel.json` dans les changements
+3. En bas à gauche, dans "Summary", écris : `Add vercel config`
+4. Clique sur **"Commit to main"**
+5. Clique sur **"Push origin"** en haut
+
+### 4️⃣ Vercel redéploie automatiquement
+
+- Attends 1-2 minutes
+- Vercel détecte le nouveau fichier et redéploie automatiquement
+- Va sur ton dashboard Vercel pour voir le déploiement
+
+---
+
+**Structure de ton projet après :**
+```
+mon-site/
+├── src/
+├── public/
+├── index.html
+├── package.json
+├── vite.config.js
+└── vercel.json  ← Nouveau fichier
