@@ -118,6 +118,8 @@
   }
   .btn.red { background: var(--red); color: var(--red-ink); }
   .btn:hover { filter: brightness(1.12); }
+  .btn.off { background: var(--line); color: var(--muted); pointer-events: none; }
+  .stock { display: block; margin-top: 10px; font-weight: 800; font-size: 14px; color: var(--red); }
 
   /* Info */
   .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
@@ -154,7 +156,8 @@
 
 <main class="wrap">
   <div class="hero">
-    <span class="badge">Précommande ouverte</span>
+    <span class="badge" id="badge">Précommande ouverte</span>
+    <span class="stock" id="stock"></span>
     <h1>Pack One Piece Day '26</h1>
     <p>La <strong>Premium Card Collection officielle Bandai</strong> éditée pour le ONE PIECE DAY'26, exclusivité Premium Bandai Japon. <strong>Vendue scellée</strong>, en version japonaise : la carte <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong> commémoratives.</p>
     <div class="prices">
@@ -246,6 +249,8 @@
   // Colle ici tes liens de paiement Stripe (ou PayPal) et tes infos.
   // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
   const CONFIG = {
+    // Packs encore disponibles. Mets 0 quand tout est vendu : les boutons passent en « Épuisé ».
+    stock: 20,
     liens: {
       unite: "https://buy.stripe.com/cNieV62mM3gf7Jx49w6EU02",   // 1 pack (60 €) + livraison
       lot:   "https://buy.stripe.com/fZubIUd1qaIHd3RgWi6EU03",   // lot (50 €/pack) + livraison
@@ -267,7 +272,12 @@
   document.getElementById("ship-cost").textContent = CONFIG.livraison;
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  const epuise = CONFIG.stock <= 0;
+  document.getElementById("stock").textContent = epuise ? "" : `Stock limité : ${CONFIG.stock} packs disponibles`;
+  if (epuise) document.getElementById("badge").textContent = "Épuisé";
+
   document.querySelectorAll("[data-buy]").forEach(btn => {
+    if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
     const lien = CONFIG.liens[btn.dataset.buy];
     if (lien) {
       btn.href = lien;
