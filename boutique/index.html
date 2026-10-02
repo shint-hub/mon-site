@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShPowerShop · Cartes One Piece Day '26</title>
+<meta name="description" content="Précommande des cartes promo One Piece Day '26 (version japonaise) : Monkey D. Luffy et carte DON!!. 60 € l'unité, 50 € l'unité en lot.">
+<meta property="og:title" content="ShPowerShop · Cartes One Piece Day '26">
+<meta property="og:description" content="Précommande : Luffy + DON!! One Piece Day '26. 60 €/u ou 100 € le lot.">
+<meta property="og:image" content="img/visuel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f3;
+    --surface: #ffffff;
+    --ink: #111111;
+    --muted: #5f5f5f;
+    --line: #e2e0dc;
+    --red: #c8101a;
+    --red-ink: #ffffff;
+    --black-btn: #111111;
+    --black-btn-ink: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --ink: #f2f2f2;
+      --muted: #a8a8a8;
+      --line: #2e2e2e;
+      --red: #e0242e;
+      --black-btn: #f2f2f2;
+      --black-btn-ink: #111111;
+      --shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121212; --surface: #1c1c1c; --ink: #f2f2f2; --muted: #a8a8a8; --line: #2e2e2e;
+    --red: #e0242e; --black-btn: #f2f2f2; --black-btn-ink: #111111; --shadow: 0 10px 30px rgba(0,0,0,.5);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: "Permanent Marker", cursive; font-size: 26px; text-decoration: none; letter-spacing: .5px; }
+  .logo span { color: var(--red); }
+  header nav a { font-weight: 600; font-size: 14px; text-decoration: none; margin-left: 18px; color: var(--muted); }
+  header nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 48px 0 24px; text-align: center; }
+  .badge {
+    display: inline-block; background: var(--red); color: var(--red-ink);
+    font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .hero h1 { font-family: "Permanent Marker", cursive; font-weight: 400; font-size: clamp(34px, 7vw, 60px); line-height: 1.1; margin: 16px 0 10px; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+  .prices { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .brush {
+    font-family: "Permanent Marker", cursive; font-size: clamp(22px, 4.5vw, 32px);
+    padding: 6px 22px; transform: rotate(-2deg); color: #fff;
+  }
+  .brush.black { background: #111; }
+  .brush.red { background: var(--red); transform: rotate(2deg); }
+
+  /* Products */
+  section { padding: 32px 0; }
+  h2 { font-size: 24px; margin: 0 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow);
+  }
+  .card .pic { background: #ecebe8; padding: 22px; display: grid; place-items: center; }
+  .card .pic img { border-radius: 10px; max-height: 360px; width: auto; transition: transform .25s ease; }
+  .card:hover .pic img { transform: scale(1.03) rotate(-1deg); }
+  .card .pic.duo { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .card .pic.duo img { max-height: 260px; }
+  .card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card h3 { margin: 0; font-size: 19px; }
+  .card .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .card .row { display: flex; align-items: baseline; justify-content: space-between; margin-top: auto; padding-top: 10px; gap: 10px; }
+  .price { font-size: 28px; font-weight: 800; }
+  .price small { font-size: 14px; font-weight: 600; color: var(--muted); }
+  .old { text-decoration: line-through; color: var(--muted); font-size: 16px; font-weight: 600; margin-right: 6px; }
+  .tag { background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
+  .card.best { border: 2px solid var(--red); }
+
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 800;
+    padding: 14px 18px; border-radius: 12px; border: 0; cursor: pointer; font-size: 16px;
+    background: var(--black-btn); color: var(--black-btn-ink); margin-top: 10px;
+  }
+  .btn.red { background: var(--red); color: var(--red-ink); }
+  .btn:hover { filter: brightness(1.12); }
+
+  /* Info */
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .info div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .info h3 { margin: 0 0 6px; font-size: 16px; }
+  .info p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; font-size: 15px; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 32px; padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+  footer .logo { font-size: 20px; color: var(--ink); }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 520px) {
+    header nav a:not(:last-child) { display: none; }
+    .hero { padding-top: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">ShPower<span>Shop</span></a>
+    <nav>
+      <a href="#produits">Produits</a>
+      <a href="#infos">Infos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="badge">Précommande ouverte</span>
+    <h1>Cartes One Piece Day '26</h1>
+    <p>Les deux cartes promo de l'événement One Piece Day '26 (22 et 23 août 2026), en version japonaise : <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong>.</p>
+    <div class="prices">
+      <div class="brush black">60€/u</div>
+      <div class="brush red">50€ si lot</div>
+    </div>
+  </div>
+
+  <section id="produits">
+    <h2>Les produits</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="pic"><img src="img/luffy.jpg" alt="Carte promo Monkey D. Luffy One Piece Day '26" loading="lazy"></div>
+        <div class="body">
+          <h3>Monkey D. Luffy · One Piece Day '26</h3>
+          <p class="meta">Carte personnage promo · Coût 7 · Puissance 9000 · Version japonaise</p>
+          <div class="row"><span class="price">60 €</span></div>
+          <a class="btn" data-buy="luffy" href="#">Précommander</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><img src="img/don.jpg" alt="Carte DON!! One Piece Day '26" loading="lazy"></div>
+        <div class="body">
+          <h3>Carte DON!! · One Piece Day '26</h3>
+          <p class="meta">Carte DON!! promo de l'événement (22–23 août 2026) · Version japonaise</p>
+          <div class="row"><span class="price">60 €</span></div>
+          <a class="btn" data-buy="don" href="#">Précommander</a>
+        </div>
+      </article>
+
+      <article class="card best">
+        <div class="pic duo">
+          <img src="img/luffy.jpg" alt="Carte Luffy" loading="lazy">
+          <img src="img/don.jpg" alt="Carte DON!!" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Lot Luffy + DON!! <span class="tag">−20 €</span></h3>
+          <p class="meta">Les deux cartes ensemble, soit 50 € la carte.</p>
+          <div class="row"><span class="price"><span class="old">120 €</span>100 €</span></div>
+          <a class="btn red" data-buy="lot" href="#">Précommander le lot</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="infos">
+    <h2>Infos pratiques</h2>
+    <div class="info">
+      <div><h3>📦 Expédition</h3><p id="ship-date"></p></div>
+      <div><h3>🚚 Livraison</h3><p id="ship-cost"></p></div>
+      <div><h3>🔒 Paiement</h3><p>Paiement sécurisé par carte bancaire (Stripe). Tes coordonnées bancaires ne passent jamais par ce site.</p></div>
+      <div><h3>🛡️ Protection</h3><p>Cartes envoyées sous sleeve et toploader, dans une enveloppe rigide et suivie.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Questions fréquentes</h2>
+    <details>
+      <summary>C'est quoi une précommande ?</summary>
+      <p>Tu réserves ta carte maintenant et tu paies à la commande. Elle est expédiée dès réception, à la date indiquée dans les infos pratiques. Tu reçois un e-mail avec le numéro de suivi.</p>
+    </details>
+    <details>
+      <summary>Les cartes sont-elles authentiques ?</summary>
+      <p>Oui, ce sont des cartes officielles distribuées lors de l'événement One Piece Day '26 au Japon. Le filigrane « ShPowerShop » sur les photos sert uniquement à protéger les images.</p>
+    </details>
+    <details>
+      <summary>Je peux annuler ma précommande ?</summary>
+      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que la carte n'a pas été expédiée. Écris-nous via le contact ci-dessous.</p>
+    </details>
+    <details>
+      <summary>Comment me contacter ?</summary>
+      <p id="contact"></p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">ShPower<span style="color:var(--red)">Shop</span></div>
+    <p>Vente entre particuliers. ShPowerShop n'est pas affilié à Shueisha, Toei Animation ou Bandai. One Piece est une marque de leurs détenteurs respectifs.</p>
+    <p>Site hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.</p>
+    <p>© <span id="year"></span> ShPowerShop</p>
+  </div>
+</footer>
+
+<script>
+  // ─── À COMPLÉTER ─────────────────────────────────────────────
+  // Colle ici tes liens de paiement Stripe (ou PayPal) et tes infos.
+  // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
+  const CONFIG = {
+    liens: {
+      luffy: "",   // ex. "https://buy.stripe.com/xxxx"  (60 €)
+      don:   "",   // ex. "https://buy.stripe.com/yyyy"  (60 €)
+      lot:   "",   // ex. "https://buy.stripe.com/zzzz"  (100 €)
+    },
+    dateExpedition: "Expédition prévue courant novembre 2026 (date à confirmer).",
+    livraison: "Envoi suivi en France : 5 €. Remise en main propre possible selon la ville.",
+    contact: { email: "", instagram: "" }, // ex. email: "toi@exemple.fr", instagram: "shpowershop"
+  };
+  // ─────────────────────────────────────────────────────────────
+
+  const c = CONFIG.contact;
+  const contactUrl = c.instagram ? `https://instagram.com/${c.instagram}` : c.email ? `mailto:${c.email}` : "#faq";
+  const contactParts = [];
+  if (c.email) contactParts.push(`Par e-mail : <a href="mailto:${c.email}">${c.email}</a>`);
+  if (c.instagram) contactParts.push(`Sur Instagram : <a href="https://instagram.com/${c.instagram}" target="_blank" rel="noopener">@${c.instagram}</a>`);
+  document.getElementById("contact").innerHTML = contactParts.join("<br>") || "Coordonnées bientôt disponibles.";
+
+  document.getElementById("ship-date").textContent = CONFIG.dateExpedition;
+  document.getElementById("ship-cost").textContent = CONFIG.livraison;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.querySelectorAll("[data-buy]").forEach(btn => {
+    const lien = CONFIG.liens[btn.dataset.buy];
+    if (lien) {
+      btn.href = lien;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+    } else {
+      btn.href = contactUrl;
+      if (contactUrl === "#faq") btn.addEventListener("click", () => document.querySelector("#faq details:last-of-type").open = true);
+    }
+  });
+</script>
+</body>
+</html>
