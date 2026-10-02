@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShPowerShop · Cartes One Piece Day '26</title>
-<meta name="description" content="Précommande des cartes promo One Piece Day '26 (version japonaise) : Monkey D. Luffy et carte DON!!. 60 € l'unité, 50 € l'unité en lot.">
-<meta property="og:title" content="ShPowerShop · Cartes One Piece Day '26">
-<meta property="og:description" content="Précommande : Luffy + DON!! One Piece Day '26. 60 €/u ou 100 € le lot.">
+<title>ShPowerShop · Pack One Piece Day '26</title>
+<meta name="description" content="Précommande du pack scellé One Piece Day '26 (version japonaise) : Monkey D. Luffy + carte DON!!. 60 € le pack, 50 € le pack en lot.">
+<meta property="og:title" content="ShPowerShop · Pack One Piece Day '26">
+<meta property="og:description" content="Précommande : pack scellé Luffy + DON!! One Piece Day '26. 60 €/u, 50 €/u en lot.">
 <meta property="og:image" content="img/visuel.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,28 +79,37 @@
   .brush.black { background: #111; }
   .brush.red { background: var(--red); transform: rotate(2deg); }
 
-  /* Products */
+  /* Product */
   section { padding: 32px 0; }
   h2 { font-size: 24px; margin: 0 0 20px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-    overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow);
+  .product {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    display: grid; grid-template-columns: 1.05fr 1fr; box-shadow: var(--shadow);
   }
-  .card .pic { background: #ecebe8; padding: 22px; display: grid; place-items: center; }
-  .card .pic img { border-radius: 10px; max-height: 360px; width: auto; transition: transform .25s ease; }
-  .card:hover .pic img { transform: scale(1.03) rotate(-1deg); }
-  .card .pic.duo { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .card .pic.duo img { max-height: 260px; }
-  .card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .card h3 { margin: 0; font-size: 19px; }
-  .card .meta { color: var(--muted); font-size: 14px; margin: 0; }
-  .card .row { display: flex; align-items: baseline; justify-content: space-between; margin-top: auto; padding-top: 10px; gap: 10px; }
-  .price { font-size: 28px; font-weight: 800; }
+  .product .pic { background: #ecebe8; padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: center; }
+  .product .pic img { border-radius: 10px; width: 100%; transition: transform .25s ease; }
+  .product .pic img:first-child { transform: rotate(-3deg); }
+  .product .pic img:last-child { transform: rotate(3deg); }
+  .product:hover .pic img { transform: rotate(0) scale(1.02); }
+  .product .body { padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .product h2 { margin: 0; font-size: 26px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .meta.small { font-size: 13px; text-align: center; }
+  .contents { margin: 4px 0 8px; padding-left: 20px; }
+  .contents li { margin: 4px 0; }
+  .offers { display: grid; gap: 12px; }
+  .offer { border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  .offer h3 { margin: 0; font-size: 17px; }
+  .offer .btn { grid-column: 1 / -1; }
+  .offer.best { border: 2px solid var(--red); }
+  .price { font-size: 26px; font-weight: 800; white-space: nowrap; }
   .price small { font-size: 14px; font-weight: 600; color: var(--muted); }
-  .old { text-decoration: line-through; color: var(--muted); font-size: 16px; font-weight: 600; margin-right: 6px; }
-  .tag { background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
-  .card.best { border: 2px solid var(--red); }
+  .tag { background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .product { grid-template-columns: 1fr; }
+    .product .pic { padding: 22px; }
+    .product .body { padding: 20px; }
+  }
 
   .btn {
     display: block; text-align: center; text-decoration: none; font-weight: 800;
@@ -136,7 +145,7 @@
   <div class="wrap">
     <a class="logo" href="#">ShPower<span>Shop</span></a>
     <nav>
-      <a href="#produits">Produits</a>
+      <a href="#produits">Le pack</a>
       <a href="#infos">Infos</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -146,8 +155,8 @@
 <main class="wrap">
   <div class="hero">
     <span class="badge">Précommande ouverte</span>
-    <h1>Cartes One Piece Day '26</h1>
-    <p>Les deux cartes promo de l'événement One Piece Day '26 (22 et 23 août 2026), en version japonaise : <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong>.</p>
+    <h1>Pack One Piece Day '26</h1>
+    <p>Le pack promo officiel de l'événement One Piece Day '26 (22 et 23 août 2026), <strong>vendu scellé</strong>, en version japonaise. Il contient la carte <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong>.</p>
     <div class="prices">
       <div class="brush black">60€/u</div>
       <div class="brush red">50€ si lot</div>
@@ -155,40 +164,39 @@
   </div>
 
   <section id="produits">
-    <h2>Les produits</h2>
-    <div class="grid">
-      <article class="card">
-        <div class="pic"><img src="img/luffy.jpg" alt="Carte promo Monkey D. Luffy One Piece Day '26" loading="lazy"></div>
-        <div class="body">
-          <h3>Monkey D. Luffy · One Piece Day '26</h3>
-          <p class="meta">Carte personnage promo · Coût 7 · Puissance 9000 · Version japonaise</p>
-          <div class="row"><span class="price">60 €</span></div>
-          <a class="btn" data-buy="luffy" href="#">Précommander</a>
-        </div>
-      </article>
+    <div class="product">
+      <div class="pic duo">
+        <img src="img/luffy.jpg" alt="Carte promo Monkey D. Luffy One Piece Day '26">
+        <img src="img/don.jpg" alt="Carte DON!! One Piece Day '26">
+      </div>
+      <div class="body">
+        <h2>Pack scellé One Piece Day '26</h2>
+        <p class="meta">Version japonaise · Pack scellé d'origine, jamais ouvert</p>
+        <ul class="contents">
+          <li><strong>Monkey D. Luffy</strong> : carte personnage promo (coût 7, puissance 9000)</li>
+          <li><strong>Carte DON!!</strong> One Piece Day '26 (22–23 août 2026)</li>
+        </ul>
 
-      <article class="card">
-        <div class="pic"><img src="img/don.jpg" alt="Carte DON!! One Piece Day '26" loading="lazy"></div>
-        <div class="body">
-          <h3>Carte DON!! · One Piece Day '26</h3>
-          <p class="meta">Carte DON!! promo de l'événement (22–23 août 2026) · Version japonaise</p>
-          <div class="row"><span class="price">60 €</span></div>
-          <a class="btn" data-buy="don" href="#">Précommander</a>
+        <div class="offers">
+          <div class="offer">
+            <div>
+              <h3>1 pack</h3>
+              <p class="meta">Prix à l'unité</p>
+            </div>
+            <span class="price">60 €</span>
+            <a class="btn" data-buy="unite" href="#">Précommander 1 pack</a>
+          </div>
+          <div class="offer best">
+            <div>
+              <h3>Lot · 2 packs ou plus <span class="tag">−10 €/pack</span></h3>
+              <p class="meta">2 packs = 100 € · 3 packs = 150 € · etc.</p>
+            </div>
+            <span class="price">50 € <small>/ pack</small></span>
+            <a class="btn red" data-buy="lot" href="#">Précommander un lot</a>
+          </div>
         </div>
-      </article>
-
-      <article class="card best">
-        <div class="pic duo">
-          <img src="img/luffy.jpg" alt="Carte Luffy" loading="lazy">
-          <img src="img/don.jpg" alt="Carte DON!!" loading="lazy">
-        </div>
-        <div class="body">
-          <h3>Lot Luffy + DON!! <span class="tag">−20 €</span></h3>
-          <p class="meta">Les deux cartes ensemble, soit 50 € la carte.</p>
-          <div class="row"><span class="price"><span class="old">120 €</span>100 €</span></div>
-          <a class="btn red" data-buy="lot" href="#">Précommander le lot</a>
-        </div>
-      </article>
+        <p class="meta small">Tu choisis le nombre de packs sur la page de paiement.</p>
+      </div>
     </div>
   </section>
 
@@ -198,7 +206,7 @@
       <div><h3>📦 Expédition</h3><p id="ship-date"></p></div>
       <div><h3>🚚 Livraison</h3><p id="ship-cost"></p></div>
       <div><h3>🔒 Paiement</h3><p>Paiement sécurisé par carte bancaire (Stripe). Tes coordonnées bancaires ne passent jamais par ce site.</p></div>
-      <div><h3>🛡️ Protection</h3><p>Cartes envoyées sous sleeve et toploader, dans une enveloppe rigide et suivie.</p></div>
+      <div><h3>🛡️ Protection</h3><p>Pack scellé envoyé protégé, dans une enveloppe rigide avec suivi.</p></div>
     </div>
   </section>
 
@@ -206,15 +214,15 @@
     <h2>Questions fréquentes</h2>
     <details>
       <summary>C'est quoi une précommande ?</summary>
-      <p>Tu réserves ta carte maintenant et tu paies à la commande. Elle est expédiée dès réception, à la date indiquée dans les infos pratiques. Tu reçois un e-mail avec le numéro de suivi.</p>
+      <p>Tu réserves ton pack maintenant et tu paies à la commande. Il est expédié dès réception, à la date indiquée dans les infos pratiques. Tu reçois un e-mail avec le numéro de suivi.</p>
     </details>
     <details>
       <summary>Les cartes sont-elles authentiques ?</summary>
-      <p>Oui, ce sont des cartes officielles distribuées lors de l'événement One Piece Day '26 au Japon. Le filigrane « ShPowerShop » sur les photos sert uniquement à protéger les images.</p>
+      <p>Oui, c'est le pack officiel de l'événement One Piece Day '26 au Japon, vendu scellé d'origine. Le filigrane « ShPowerShop » sur les photos sert uniquement à protéger les images.</p>
     </details>
     <details>
       <summary>Je peux annuler ma précommande ?</summary>
-      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que la carte n'a pas été expédiée. Écris-nous via le contact ci-dessous.</p>
+      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que le pack n'a pas été expédié. Écris-nous via le contact ci-dessous.</p>
     </details>
     <details>
       <summary>Comment me contacter ?</summary>
@@ -238,9 +246,8 @@
   // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
   const CONFIG = {
     liens: {
-      luffy: "",   // ex. "https://buy.stripe.com/xxxx"  (60 €)
-      don:   "",   // ex. "https://buy.stripe.com/yyyy"  (60 €)
-      lot:   "",   // ex. "https://buy.stripe.com/zzzz"  (100 €)
+      unite: "",   // lien Stripe : 1 pack à 60 €               ex. "https://buy.stripe.com/xxxx"
+      lot:   "",   // lien Stripe : 50 €/pack, quantité min. 2   ex. "https://buy.stripe.com/yyyy"
     },
     dateExpedition: "Expédition prévue courant novembre 2026 (date à confirmer).",
     livraison: "Envoi suivi en France : 5 €. Remise en main propre possible selon la ville.",
