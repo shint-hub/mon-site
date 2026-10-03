@@ -119,6 +119,9 @@
   .btn.red { background: var(--red); color: var(--red-ink); }
   .btn:hover { filter: brightness(1.12); }
   .btn.off { background: var(--line); color: var(--muted); pointer-events: none; }
+  .zone { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+  .zone button { border: 0; border-radius: 9px; padding: 10px 8px; font: inherit; font-weight: 700; font-size: 14px; background: transparent; color: var(--muted); cursor: pointer; }
+  .zone button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.15); }
   .stock { display: block; margin-top: 10px; font-weight: 800; font-size: 14px; color: var(--red); }
 
   /* Info */
@@ -181,6 +184,10 @@
         </ul>
         <p class="meta">Édition premium pensée pour les collectionneurs : jamais vendue en boutique ni sur le lieu de l'événement, uniquement via la boutique officielle Premium Bandai au Japon.</p>
 
+        <div class="zone" role="group" aria-label="Pays de livraison">
+          <button type="button" data-zone="fr" aria-pressed="true">🇫🇷 Livraison en France</button>
+          <button type="button" data-zone="eu" aria-pressed="false">🇪🇺 Livraison en Europe</button>
+        </div>
         <div class="offers">
           <div class="offer">
             <div>
@@ -199,7 +206,7 @@
             <a class="btn red" data-buy="lot" href="#">Précommander un lot</a>
           </div>
         </div>
-        <p class="meta small">Frais de port (environ 6 €) ajoutés au paiement. Pour un lot, choisis le nombre de packs sur la page de paiement.</p>
+        <p class="meta small" id="ship-note"></p>
       </div>
     </div>
   </section>
@@ -250,13 +257,26 @@
   // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
   const CONFIG = {
     // Packs encore disponibles. Mets 0 quand tout est vendu : les boutons passent en « Épuisé ».
-    stock: 20,
-    liens: {
-      unite: "https://buy.stripe.com/cNieV62mM3gf7Jx49w6EU02",   // 1 pack (60 €) + livraison
-      lot:   "https://buy.stripe.com/fZubIUd1qaIHd3RgWi6EU03",   // lot (50 €/pack, 4 à 10 packs) + livraison
+    stock: 19,
+    // Un jeu de liens Stripe par zone de livraison (le prix du port est inclus dans chaque lien).
+    zones: {
+      fr: {
+        port: "6 €",
+        liens: {
+          unite: "https://buy.stripe.com/cNieV62mM3gf7Jx49w6EU02",   // 1 pack (60 €) + livraison France
+          lot:   "https://buy.stripe.com/fZubIUd1qaIHd3RgWi6EU03",   // lot (50 €/pack, 4 à 10) + livraison France
+        },
+      },
+      eu: {
+        port: "15 €",
+        liens: {
+          unite: "https://buy.stripe.com/28E7sE8LaaIHgg335s6EU04",   // 1 pack (60 €) + livraison UE
+          lot:   "https://buy.stripe.com/00wbIU9Pe5ongg3dK66EU05",   // lot (50 €/pack, 4 à 10) + livraison UE
+        },
+      },
     },
     dateExpedition: "Expédition prévue en mai–juin 2027, dès que Bandai nous livre les packs. Cette date est fixée par Bandai, elle ne dépend pas de nous.",
-    livraison: "Envoi en petit colis suivi (Colissimo) en France : environ 6 €.",
+    livraison: "Envoi en petit colis suivi : 6 € en France, 15 € vers les autres pays de l'Union européenne.",
     contact: { email: "Shintseko@hotmail.com", instagram: "" },
   };
   // ─────────────────────────────────────────────────────────────
@@ -276,18 +296,25 @@
   document.getElementById("stock").textContent = epuise ? "" : `Stock limité : ${CONFIG.stock} packs disponibles`;
   if (epuise) document.getElementById("badge").textContent = "Épuisé";
 
-  document.querySelectorAll("[data-buy]").forEach(btn => {
-    if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
-    const lien = CONFIG.liens[btn.dataset.buy];
-    if (lien) {
-      btn.href = lien;
-      btn.target = "_blank";
-      btn.rel = "noopener";
-    } else {
-      btn.href = contactUrl;
-      if (contactUrl === "#faq") btn.addEventListener("click", () => document.querySelector("#faq details:last-of-type").open = true);
-    }
-  });
+  function choisirZone(zone) {
+    const z = CONFIG.zones[zone];
+    document.querySelectorAll("[data-zone]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.zone === zone)));
+    document.getElementById("ship-note").textContent =
+      `Frais de port (${z.port}) ajoutés au paiement. Pour un lot, choisis le nombre de packs sur la page de paiement.`;
+    document.querySelectorAll("[data-buy]").forEach(btn => {
+      if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
+      const lien = z.liens[btn.dataset.buy];
+      if (lien) {
+        btn.href = lien;
+        btn.target = "_blank";
+        btn.rel = "noopener";
+      } else {
+        btn.href = contactUrl;
+      }
+    });
+  }
+  document.querySelectorAll("[data-zone]").forEach(b => b.addEventListener("click", () => choisirZone(b.dataset.zone)));
+  choisirZone("fr");
 </script>
 </body>
 </html>
