@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShPowerShop · Pack One Piece Day '26</title>
-<meta name="description" content="Précommande de la Premium Card Collection ONE PIECE DAY'26, produit officiel Bandai scellé (version japonaise) : Monkey D. Luffy P-161 + carte DON!!. 60 € le pack, 50 € le pack dès 4 achetés.">
-<meta property="og:title" content="ShPowerShop · Pack One Piece Day '26">
-<meta property="og:description" content="Précommande : pack scellé Luffy + DON!! One Piece Day '26. 60 €/u, 50 €/u dès 4.">
+<title>ShPowerShop · Précommandes One Piece Card Game</title>
+<meta name="description" content="ShPowerShop : précommandes de produits officiels Bandai ONE PIECE CARD GAME pour collectionneurs. Premium Card Collection ONE PIECE DAY'26 et 4th Anniversary Set.">
+<meta property="og:title" content="ShPowerShop · Précommandes One Piece Card Game">
+<meta property="og:description" content="Produits officiels Bandai pour collectionneurs, en précommande.">
 <meta property="og:image" content="https://shpowershop.vercel.app/img/visuel.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,103 +142,76 @@
     header nav a:not(:last-child) { display: none; }
     .hero { padding-top: 32px; }
   }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow);
+          display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .2s ease; }
+  .card:hover { transform: translateY(-4px); }
+  .card .pic { background: #ecebe8; aspect-ratio: 4 / 3; display: grid; place-items: center; padding: 18px; position: relative; }
+  .card .pic img { max-height: 100%; width: auto; border-radius: 10px; }
+  .card .pic.duo { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .card .pic.duo img { max-height: 100%; }
+  .card .flag { position: absolute; top: 12px; left: 12px; background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800;
+                padding: 4px 10px; border-radius: 999px; letter-spacing: .04em; text-transform: uppercase; }
+  .card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card h2 { margin: 0; font-size: 20px; }
+  .card .row { display: flex; justify-content: space-between; align-items: baseline; margin-top: auto; padding-top: 10px; }
+  .card .go { font-weight: 800; color: var(--red); }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#">ShPower<span>Shop</span></a>
+    <a class="logo" href="./">ShPower<span>Shop</span></a>
     <nav>
-      <a href="#produits">Le pack</a>
-      <a href="#infos">Infos</a>
-      <a href="#faq">FAQ</a>
+      <a href="#produits">Produits</a>
+      <a href="mailto:Shintseko@hotmail.com">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
   <div class="hero">
-    <span class="badge" id="badge">Précommande ouverte</span>
-    <span class="stock" id="stock"></span>
-    <h1>Pack One Piece Day '26</h1>
-    <p>La <strong>Premium Card Collection officielle Bandai</strong> éditée pour le ONE PIECE DAY'26, exclusivité Premium Bandai Japon. <strong>Vendue scellée</strong>, en version japonaise : la carte <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong> commémoratives.</p>
-    <div class="prices">
-      <div class="brush black">60€/u</div>
-      <div class="brush red">50€ dès 4</div>
-    </div>
+    <span class="badge">Précommandes ouvertes</span>
+    <h1>Produits officiels One Piece Card Game</h1>
+    <p>Des éditions Bandai pour collectionneurs, introuvables en boutique, livrées <strong>scellées d'origine</strong> en France et en Europe.</p>
   </div>
 
   <section id="produits">
-    <div class="product">
-      <div class="pic duo">
-        <img src="img/luffy.jpg" alt="Carte promo Monkey D. Luffy One Piece Day '26">
-        <img src="img/don.jpg" alt="Carte DON!! One Piece Day '26">
-      </div>
-      <div class="body">
-        <h2>Premium Card Collection ONE PIECE DAY'26</h2>
-        <p class="meta">Produit officiel Bandai · Exclusivité Premium Bandai Japon · Version japonaise · Scellé d'origine</p>
-        <ul class="contents">
-          <li><strong>Monkey D. Luffy (P-161)</strong> : carte promo exclusive à l'illustration commémorative ONE PIECE DAY'26</li>
-          <li><strong>Carte DON!! ONE PIECE DAY'26</strong> : design spécial réservé à cette édition</li>
-        </ul>
-        <p class="meta">Édition premium pensée pour les collectionneurs : jamais vendue en boutique ni sur le lieu de l'événement, uniquement via la boutique officielle Premium Bandai au Japon.</p>
-
-        <div class="zone" role="group" aria-label="Pays de livraison">
-          <button type="button" data-zone="fr" aria-pressed="true">🇫🇷 Livraison en France</button>
-          <button type="button" data-zone="eu" aria-pressed="false">🇪🇺 Livraison en Europe</button>
+    <div class="grid">
+      <a class="card" href="pack-one-piece-day-26.html">
+        <div class="pic duo">
+          <span class="flag">Précommande</span>
+          <img src="img/luffy.jpg" alt="Carte Luffy ONE PIECE DAY'26">
+          <img src="img/don.jpg" alt="Carte DON!! ONE PIECE DAY'26">
         </div>
-        <div class="offers">
-          <div class="offer">
-            <div>
-              <h3>1 pack</h3>
-              <p class="meta">Prix à l'unité</p>
-            </div>
-            <span class="price">60 €</span>
-            <a class="btn" data-buy="unite" href="#">Précommander 1 pack</a>
-          </div>
-          <div class="offer best">
-            <div>
-              <h3>Lot · 4 packs ou plus <span class="tag">−10 €/pack</span></h3>
-              <p class="meta">4 packs = 200 € · 5 packs = 250 € · etc.</p>
-            </div>
-            <span class="price">50 € <small>/ pack</small></span>
-            <a class="btn red" data-buy="lot" href="#">Précommander un lot</a>
-          </div>
+        <div class="body">
+          <h2>Premium Card Collection ONE PIECE DAY'26</h2>
+          <p class="meta">Luffy P-161 + carte DON!! commémorative · Exclusivité Premium Bandai Japon</p>
+          <div class="row"><span class="price">60 €</span><span class="go">Voir →</span></div>
         </div>
-        <p class="meta small" id="ship-note"></p>
-      </div>
+      </a>
+      <a class="card" href="coffret-4th-anniversary.html">
+        <div class="pic">
+          <span class="flag">Précommande</span>
+          <img src="img/4th/coffret.jpg" alt="ONE PIECE CARD GAME 4th Anniversary Set">
+        </div>
+        <div class="body">
+          <h2>ONE PIECE CARD GAME 4th Anniversary Set</h2>
+          <p class="meta">9 cartes promo, sleeves, playmat, boîte de deck et boîte de rangement · Version japonaise · Plus qu'1 exemplaire</p>
+          <div class="row"><span class="price">350 €</span><span class="go">Voir →</span></div>
+        </div>
+      </a>
     </div>
   </section>
 
-  <section id="infos">
-    <h2>Infos pratiques</h2>
+  <section>
     <div class="info">
-      <div><h3>📦 Expédition</h3><p id="ship-date"></p></div>
-      <div><h3>🚚 Livraison</h3><p id="ship-cost"></p></div>
-      <div><h3>🔒 Paiement</h3><p>Paiement sécurisé par carte bancaire (Stripe). Tes coordonnées bancaires ne passent jamais par ce site.</p></div>
-      <div><h3>🛡️ Protection</h3><p>Pack scellé calé et protégé dans un petit carton, envoyé avec suivi.</p></div>
+      <div><h3>✅ 100 % officiel</h3><p>Uniquement des produits Bandai authentiques, livrés scellés d'origine.</p></div>
+      <div><h3>🚚 France &amp; Europe</h3><p>Envoi suivi en France et vers les autres pays de l'Union européenne. Frais de port indiqués sur chaque produit.</p></div>
+      <div><h3>🔒 Paiement sécurisé</h3><p>Paiement par carte bancaire via Stripe. Tes coordonnées ne passent jamais par ce site.</p></div>
     </div>
-  </section>
-
-  <section id="faq">
-    <h2>Questions fréquentes</h2>
-    <details>
-      <summary>C'est quoi une précommande ?</summary>
-      <p>Tu réserves ton pack maintenant et tu paies à la commande. Il est expédié dès que Bandai nous livre, prévu en mai–juin 2027. Cette date ne dépend pas de nous : en cas de retard de Bandai, tu es prévenu par e-mail. Tu reçois un e-mail avec le numéro de suivi.</p>
-    </details>
-    <details>
-      <summary>Les cartes sont-elles authentiques ?</summary>
-      <p>Oui. C'est la Premium Card Collection -ONE PIECE DAY'26-, un produit officiel Bandai vendu exclusivement sur Premium Bandai (Japon), livré scellé d'origine. Le filigrane « ShPowerShop » sur les photos sert uniquement à protéger les images.</p>
-    </details>
-    <details>
-      <summary>Je peux annuler ma précommande ?</summary>
-      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que le pack n'a pas été expédié. Écris-nous via le contact ci-dessous.</p>
-    </details>
-    <details>
-      <summary>Comment me contacter ?</summary>
-      <p id="contact"></p>
-    </details>
   </section>
 </main>
 
@@ -246,75 +219,9 @@
   <div class="wrap">
     <div class="logo">ShPower<span style="color:var(--red)">Shop</span></div>
     <p>Vente entre particuliers. ShPowerShop n'est pas affilié à Shueisha, Toei Animation ou Bandai. One Piece est une marque de leurs détenteurs respectifs.</p>
+    <p>Contact : <a href="mailto:Shintseko@hotmail.com">Shintseko@hotmail.com</a></p>
     <p>Site hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.</p>
-    <p>© <span id="year"></span> ShPowerShop</p>
   </div>
 </footer>
-
-<script>
-  // ─── À COMPLÉTER ─────────────────────────────────────────────
-  // Colle ici tes liens de paiement Stripe (ou PayPal) et tes infos.
-  // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
-  const CONFIG = {
-    // Packs encore disponibles. Mets 0 quand tout est vendu : les boutons passent en « Épuisé ».
-    stock: 19,
-    // Un jeu de liens Stripe par zone de livraison (le prix du port est inclus dans chaque lien).
-    zones: {
-      fr: {
-        port: "6 €",
-        liens: {
-          unite: "https://buy.stripe.com/cNieV62mM3gf7Jx49w6EU02",   // 1 pack (60 €) + livraison France
-          lot:   "https://buy.stripe.com/fZubIUd1qaIHd3RgWi6EU03",   // lot (50 €/pack, 4 à 10) + livraison France
-        },
-      },
-      eu: {
-        port: "15 €",
-        liens: {
-          unite: "https://buy.stripe.com/28E7sE8LaaIHgg335s6EU04",   // 1 pack (60 €) + livraison UE
-          lot:   "https://buy.stripe.com/00wbIU9Pe5ongg3dK66EU05",   // lot (50 €/pack, 4 à 10) + livraison UE
-        },
-      },
-    },
-    dateExpedition: "Expédition prévue en mai–juin 2027, dès que Bandai nous livre les packs. Cette date est fixée par Bandai, elle ne dépend pas de nous.",
-    livraison: "Envoi en petit colis suivi : 6 € en France, 15 € vers les autres pays de l'Union européenne.",
-    contact: { email: "Shintseko@hotmail.com", instagram: "" },
-  };
-  // ─────────────────────────────────────────────────────────────
-
-  const c = CONFIG.contact;
-  const contactUrl = c.instagram ? `https://instagram.com/${c.instagram}` : c.email ? `mailto:${c.email}` : "#faq";
-  const contactParts = [];
-  if (c.email) contactParts.push(`Par e-mail : <a href="mailto:${c.email}">${c.email}</a>`);
-  if (c.instagram) contactParts.push(`Sur Instagram : <a href="https://instagram.com/${c.instagram}" target="_blank" rel="noopener">@${c.instagram}</a>`);
-  document.getElementById("contact").innerHTML = contactParts.join("<br>") || "Coordonnées bientôt disponibles.";
-
-  document.getElementById("ship-date").textContent = CONFIG.dateExpedition;
-  document.getElementById("ship-cost").textContent = CONFIG.livraison;
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  const epuise = CONFIG.stock <= 0;
-  document.getElementById("stock").textContent = epuise ? "" : `Stock limité : ${CONFIG.stock} packs disponibles`;
-  if (epuise) document.getElementById("badge").textContent = "Épuisé";
-
-  function choisirZone(zone) {
-    const z = CONFIG.zones[zone];
-    document.querySelectorAll("[data-zone]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.zone === zone)));
-    document.getElementById("ship-note").textContent =
-      `Frais de port (${z.port}) ajoutés au paiement. Pour un lot, choisis le nombre de packs sur la page de paiement.`;
-    document.querySelectorAll("[data-buy]").forEach(btn => {
-      if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
-      const lien = z.liens[btn.dataset.buy];
-      if (lien) {
-        btn.href = lien;
-        btn.target = "_blank";
-        btn.rel = "noopener";
-      } else {
-        btn.href = contactUrl;
-      }
-    });
-  }
-  document.querySelectorAll("[data-zone]").forEach(b => b.addEventListener("click", () => choisirZone(b.dataset.zone)));
-  choisirZone("fr");
-</script>
 </body>
 </html>
