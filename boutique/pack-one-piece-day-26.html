@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShPowerShop · Pack One Piece Day '26</title>
+<meta name="description" content="Précommande de la Premium Card Collection ONE PIECE DAY'26, produit officiel Bandai scellé (version japonaise) : Monkey D. Luffy P-161 + carte DON!!. 60 € le pack, 50 € le pack dès 4 achetés.">
+<meta property="og:title" content="ShPowerShop · Pack One Piece Day '26">
+<meta property="og:description" content="Précommande : pack scellé Luffy + DON!! One Piece Day '26. 60 €/u, 50 €/u dès 4.">
+<meta property="og:image" content="https://shpowershop.vercel.app/img/visuel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f3;
+    --surface: #ffffff;
+    --ink: #111111;
+    --muted: #5f5f5f;
+    --line: #e2e0dc;
+    --red: #c8101a;
+    --red-ink: #ffffff;
+    --black-btn: #111111;
+    --black-btn-ink: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --ink: #f2f2f2;
+      --muted: #a8a8a8;
+      --line: #2e2e2e;
+      --red: #e0242e;
+      --black-btn: #f2f2f2;
+      --black-btn-ink: #111111;
+      --shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121212; --surface: #1c1c1c; --ink: #f2f2f2; --muted: #a8a8a8; --line: #2e2e2e;
+    --red: #e0242e; --black-btn: #f2f2f2; --black-btn-ink: #111111; --shadow: 0 10px 30px rgba(0,0,0,.5);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: "Bebas Neue", Impact, sans-serif; font-size: 30px; text-decoration: none; letter-spacing: 1px; }
+  .logo span { color: var(--red); }
+  header nav a { font-weight: 600; font-size: 14px; text-decoration: none; margin-left: 18px; color: var(--muted); }
+  header nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 48px 0 24px; text-align: center; }
+  .badge {
+    display: inline-block; background: var(--red); color: var(--red-ink);
+    font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .hero h1 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: clamp(42px, 9vw, 76px); line-height: 1; letter-spacing: 1px; margin: 16px 0 12px; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+  .prices { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .brush {
+    font-family: "Bebas Neue", Impact, sans-serif; font-size: clamp(26px, 5vw, 36px); letter-spacing: 1px;
+    padding: 4px 22px; transform: rotate(-2deg); color: #fff;
+  }
+  .brush.black { background: var(--black-btn); color: var(--black-btn-ink); }
+  .brush.red { background: var(--red); transform: rotate(2deg); }
+
+  /* Product */
+  section { padding: 32px 0; }
+  h2 { font-size: 24px; margin: 0 0 20px; }
+  .product {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    display: grid; grid-template-columns: 1.05fr 1fr; box-shadow: var(--shadow);
+  }
+  .product .pic { background: #ecebe8; padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: center; }
+  .product .pic img { border-radius: 10px; width: 100%; transition: transform .25s ease; }
+  .product .pic img:first-child { transform: rotate(-3deg); }
+  .product .pic img:last-child { transform: rotate(3deg); }
+  .product:hover .pic img { transform: rotate(0) scale(1.02); }
+  .product .body { padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .product h2 { margin: 0; font-size: 26px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .meta.small { font-size: 13px; text-align: center; }
+  .contents { margin: 4px 0 8px; padding-left: 20px; }
+  .contents li { margin: 4px 0; }
+  .offers { display: grid; gap: 12px; }
+  .offer { border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  .offer h3 { margin: 0; font-size: 17px; }
+  .offer .btn { grid-column: 1 / -1; }
+  .offer.best { border: 2px solid var(--red); }
+  .price { font-size: 26px; font-weight: 800; white-space: nowrap; }
+  .price small { font-size: 14px; font-weight: 600; color: var(--muted); }
+  .tag { background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .product { grid-template-columns: 1fr; }
+    .product .pic { padding: 22px; }
+    .product .body { padding: 20px; }
+  }
+
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 800;
+    padding: 14px 18px; border-radius: 12px; border: 0; cursor: pointer; font-size: 16px;
+    background: var(--black-btn); color: var(--black-btn-ink); margin-top: 10px;
+  }
+  .btn.red { background: var(--red); color: var(--red-ink); }
+  .btn:hover { filter: brightness(1.12); }
+  .btn.off { background: var(--line); color: var(--muted); pointer-events: none; }
+  .zone { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+  .zone button { border: 0; border-radius: 9px; padding: 10px 8px; font: inherit; font-weight: 700; font-size: 14px; background: transparent; color: var(--muted); cursor: pointer; }
+  .zone button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+  .stock { display: block; margin-top: 10px; font-weight: 800; font-size: 14px; color: var(--red); }
+
+  /* Info */
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .info div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .info h3 { margin: 0 0 6px; font-size: 16px; }
+  .info p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; font-size: 15px; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 32px; padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+  footer .logo { font-size: 20px; color: var(--ink); }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 520px) {
+    header nav a:not(:last-child) { display: none; }
+    .hero { padding-top: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="./">ShPower<span>Shop</span></a>
+    <nav>
+      <a href="./">Boutique</a>
+      <a href="#produits">Le pack</a>
+      <a href="#infos">Infos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="badge" id="badge">Précommande ouverte</span>
+    <span class="stock" id="stock"></span>
+    <h1>Pack One Piece Day '26</h1>
+    <p>La <strong>Premium Card Collection officielle Bandai</strong> éditée pour le ONE PIECE DAY'26, exclusivité Premium Bandai Japon. <strong>Vendue scellée</strong>, en version japonaise : la carte <strong>Monkey D. Luffy</strong> et la <strong>carte DON!!</strong> commémoratives.</p>
+    <div class="prices">
+      <div class="brush black">60€/u</div>
+      <div class="brush red">50€ dès 4</div>
+    </div>
+  </div>
+
+  <section id="produits">
+    <div class="product">
+      <div class="pic duo">
+        <img src="img/luffy.jpg" alt="Carte promo Monkey D. Luffy One Piece Day '26">
+        <img src="img/don.jpg" alt="Carte DON!! One Piece Day '26">
+      </div>
+      <div class="body">
+        <h2>Premium Card Collection ONE PIECE DAY'26</h2>
+        <p class="meta">Produit officiel Bandai · Exclusivité Premium Bandai Japon · Version japonaise · Scellé d'origine</p>
+        <ul class="contents">
+          <li><strong>Monkey D. Luffy (P-161)</strong> : carte promo exclusive à l'illustration commémorative ONE PIECE DAY'26</li>
+          <li><strong>Carte DON!! ONE PIECE DAY'26</strong> : design spécial réservé à cette édition</li>
+        </ul>
+        <p class="meta">Édition premium pensée pour les collectionneurs : jamais vendue en boutique ni sur le lieu de l'événement, uniquement via la boutique officielle Premium Bandai au Japon.</p>
+
+        <div class="zone" role="group" aria-label="Pays de livraison">
+          <button type="button" data-zone="fr" aria-pressed="true">🇫🇷 Livraison en France</button>
+          <button type="button" data-zone="eu" aria-pressed="false">🇪🇺 Livraison en Europe</button>
+        </div>
+        <div class="offers">
+          <div class="offer">
+            <div>
+              <h3>1 pack</h3>
+              <p class="meta">Prix à l'unité</p>
+            </div>
+            <span class="price">60 €</span>
+            <a class="btn" data-buy="unite" href="#">Précommander 1 pack</a>
+          </div>
+          <div class="offer best">
+            <div>
+              <h3>Lot · 4 packs ou plus <span class="tag">−10 €/pack</span></h3>
+              <p class="meta">4 packs = 200 € · 5 packs = 250 € · etc.</p>
+            </div>
+            <span class="price">50 € <small>/ pack</small></span>
+            <a class="btn red" data-buy="lot" href="#">Précommander un lot</a>
+          </div>
+        </div>
+        <p class="meta small" id="ship-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="infos">
+    <h2>Infos pratiques</h2>
+    <div class="info">
+      <div><h3>📦 Expédition</h3><p id="ship-date"></p></div>
+      <div><h3>🚚 Livraison</h3><p id="ship-cost"></p></div>
+      <div><h3>🔒 Paiement</h3><p>Paiement sécurisé par carte bancaire (Stripe). Tes coordonnées bancaires ne passent jamais par ce site.</p></div>
+      <div><h3>🛡️ Protection</h3><p>Pack scellé calé et protégé dans un petit carton, envoyé avec suivi.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Questions fréquentes</h2>
+    <details>
+      <summary>C'est quoi une précommande ?</summary>
+      <p>Tu réserves ton pack maintenant et tu paies à la commande. Il est expédié dès que Bandai nous livre, prévu en mai–juin 2027. Cette date ne dépend pas de nous : en cas de retard de Bandai, tu es prévenu par e-mail. Tu reçois un e-mail avec le numéro de suivi.</p>
+    </details>
+    <details>
+      <summary>Les cartes sont-elles authentiques ?</summary>
+      <p>Oui. C'est la Premium Card Collection -ONE PIECE DAY'26-, un produit officiel Bandai vendu exclusivement sur Premium Bandai (Japon), livré scellé d'origine. Le filigrane « ShPowerShop » sur les photos sert uniquement à protéger les images.</p>
+    </details>
+    <details>
+      <summary>Je peux annuler ma précommande ?</summary>
+      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que le pack n'a pas été expédié. Écris-nous via le contact ci-dessous.</p>
+    </details>
+    <details>
+      <summary>Comment me contacter ?</summary>
+      <p id="contact"></p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">ShPower<span style="color:var(--red)">Shop</span></div>
+    <p>Vente entre particuliers. ShPowerShop n'est pas affilié à Shueisha, Toei Animation ou Bandai. One Piece est une marque de leurs détenteurs respectifs.</p>
+    <p>Site hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.</p>
+    <p>© <span id="year"></span> ShPowerShop</p>
+  </div>
+</footer>
+
+<script>
+  // ─── À COMPLÉTER ─────────────────────────────────────────────
+  // Colle ici tes liens de paiement Stripe (ou PayPal) et tes infos.
+  // Tant qu'un lien est vide, le bouton ouvre le contact à la place.
+  const CONFIG = {
+    // Packs encore disponibles. Mets 0 quand tout est vendu : les boutons passent en « Épuisé ».
+    stock: 19,
+    // Un jeu de liens Stripe par zone de livraison (le prix du port est inclus dans chaque lien).
+    zones: {
+      fr: {
+        port: "6 €",
+        liens: {
+          unite: "https://buy.stripe.com/cNieV62mM3gf7Jx49w6EU02",   // 1 pack (60 €) + livraison France
+          lot:   "https://buy.stripe.com/fZubIUd1qaIHd3RgWi6EU03",   // lot (50 €/pack, 4 à 10) + livraison France
+        },
+      },
+      eu: {
+        port: "15 €",
+        liens: {
+          unite: "https://buy.stripe.com/28E7sE8LaaIHgg335s6EU04",   // 1 pack (60 €) + livraison UE
+          lot:   "https://buy.stripe.com/00wbIU9Pe5ongg3dK66EU05",   // lot (50 €/pack, 4 à 10) + livraison UE
+        },
+      },
+    },
+    dateExpedition: "Expédition prévue en mai–juin 2027, dès que Bandai nous livre les packs. Cette date est fixée par Bandai, elle ne dépend pas de nous.",
+    livraison: "Envoi en petit colis suivi : 6 € en France, 15 € vers les autres pays de l'Union européenne.",
+    contact: { email: "Shintseko@hotmail.com", instagram: "" },
+  };
+  // ─────────────────────────────────────────────────────────────
+
+  const c = CONFIG.contact;
+  const contactUrl = c.instagram ? `https://instagram.com/${c.instagram}` : c.email ? `mailto:${c.email}` : "#faq";
+  const contactParts = [];
+  if (c.email) contactParts.push(`Par e-mail : <a href="mailto:${c.email}">${c.email}</a>`);
+  if (c.instagram) contactParts.push(`Sur Instagram : <a href="https://instagram.com/${c.instagram}" target="_blank" rel="noopener">@${c.instagram}</a>`);
+  document.getElementById("contact").innerHTML = contactParts.join("<br>") || "Coordonnées bientôt disponibles.";
+
+  document.getElementById("ship-date").textContent = CONFIG.dateExpedition;
+  document.getElementById("ship-cost").textContent = CONFIG.livraison;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const epuise = CONFIG.stock <= 0;
+  document.getElementById("stock").textContent = epuise ? "" : `Stock limité : ${CONFIG.stock} packs disponibles`;
+  if (epuise) document.getElementById("badge").textContent = "Épuisé";
+
+  function choisirZone(zone) {
+    const z = CONFIG.zones[zone];
+    document.querySelectorAll("[data-zone]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.zone === zone)));
+    document.getElementById("ship-note").textContent =
+      `Frais de port (${z.port}) ajoutés au paiement. Pour un lot, choisis le nombre de packs sur la page de paiement.`;
+    document.querySelectorAll("[data-buy]").forEach(btn => {
+      if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
+      const lien = z.liens[btn.dataset.buy];
+      if (lien) {
+        btn.href = lien;
+        btn.target = "_blank";
+        btn.rel = "noopener";
+      } else {
+        btn.href = contactUrl;
+      }
+    });
+  }
+  document.querySelectorAll("[data-zone]").forEach(b => b.addEventListener("click", () => choisirZone(b.dataset.zone)));
+  choisirZone("fr");
+</script>
+</body>
+</html>

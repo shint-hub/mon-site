@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShPowerShop · ONE PIECE Card Game 4th Anniversary Set</title>
+<meta name="description" content="Précommande du ONE PIECE CARD GAME 4th Anniversary Set, coffret officiel Bandai (Premium Bandai) : 9 cartes promo, 70 sleeves, playmat, boîte de deck et boîte de rangement.">
+<meta property="og:title" content="ShPowerShop · ONE PIECE Card Game 4th Anniversary Set">
+<meta property="og:description" content="Précommande : coffret officiel Bandai 4th Anniversary Set, 9 cartes promo + accessoires.">
+<meta property="og:image" content="https://shpowershop.vercel.app/img/4th/coffret.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f3;
+    --surface: #ffffff;
+    --ink: #111111;
+    --muted: #5f5f5f;
+    --line: #e2e0dc;
+    --red: #c8101a;
+    --red-ink: #ffffff;
+    --black-btn: #111111;
+    --black-btn-ink: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --ink: #f2f2f2;
+      --muted: #a8a8a8;
+      --line: #2e2e2e;
+      --red: #e0242e;
+      --black-btn: #f2f2f2;
+      --black-btn-ink: #111111;
+      --shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121212; --surface: #1c1c1c; --ink: #f2f2f2; --muted: #a8a8a8; --line: #2e2e2e;
+    --red: #e0242e; --black-btn: #f2f2f2; --black-btn-ink: #111111; --shadow: 0 10px 30px rgba(0,0,0,.5);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: "Bebas Neue", Impact, sans-serif; font-size: 30px; text-decoration: none; letter-spacing: 1px; }
+  .logo span { color: var(--red); }
+  header nav a { font-weight: 600; font-size: 14px; text-decoration: none; margin-left: 18px; color: var(--muted); }
+  header nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 48px 0 24px; text-align: center; }
+  .badge {
+    display: inline-block; background: var(--red); color: var(--red-ink);
+    font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .hero h1 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: clamp(42px, 9vw, 76px); line-height: 1; letter-spacing: 1px; margin: 16px 0 12px; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+  .prices { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .brush {
+    font-family: "Bebas Neue", Impact, sans-serif; font-size: clamp(26px, 5vw, 36px); letter-spacing: 1px;
+    padding: 4px 22px; transform: rotate(-2deg); color: #fff;
+  }
+  .brush.black { background: var(--black-btn); color: var(--black-btn-ink); }
+  .brush.red { background: var(--red); transform: rotate(2deg); }
+
+  /* Product */
+  section { padding: 32px 0; }
+  h2 { font-size: 24px; margin: 0 0 20px; }
+  .product {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    display: grid; grid-template-columns: 1.05fr 1fr; box-shadow: var(--shadow);
+  }
+  .product .pic { background: #ecebe8; padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: center; }
+  .product .pic img { border-radius: 10px; width: 100%; transition: transform .25s ease; }
+  .product .pic img:first-child { transform: rotate(-3deg); }
+  .product .pic img:last-child { transform: rotate(3deg); }
+  .product:hover .pic img { transform: rotate(0) scale(1.02); }
+  .product .body { padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .product h2 { margin: 0; font-size: 26px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .meta.small { font-size: 13px; text-align: center; }
+  .contents { margin: 4px 0 8px; padding-left: 20px; }
+  .contents li { margin: 4px 0; }
+  .offers { display: grid; gap: 12px; }
+  .offer { border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  .offer h3 { margin: 0; font-size: 17px; }
+  .offer .btn { grid-column: 1 / -1; }
+  .offer.best { border: 2px solid var(--red); }
+  .price { font-size: 26px; font-weight: 800; white-space: nowrap; }
+  .price small { font-size: 14px; font-weight: 600; color: var(--muted); }
+  .tag { background: var(--red); color: var(--red-ink); font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .product { grid-template-columns: 1fr; }
+    .product .pic { padding: 22px; }
+    .product .body { padding: 20px; }
+  }
+
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 800;
+    padding: 14px 18px; border-radius: 12px; border: 0; cursor: pointer; font-size: 16px;
+    background: var(--black-btn); color: var(--black-btn-ink); margin-top: 10px;
+  }
+  .btn.red { background: var(--red); color: var(--red-ink); }
+  .btn:hover { filter: brightness(1.12); }
+  .btn.off { background: var(--line); color: var(--muted); pointer-events: none; }
+  .zone { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+  .zone button { border: 0; border-radius: 9px; padding: 10px 8px; font: inherit; font-weight: 700; font-size: 14px; background: transparent; color: var(--muted); cursor: pointer; }
+  .zone button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+  .stock { display: block; margin-top: 10px; font-weight: 800; font-size: 14px; color: var(--red); }
+
+  .gallery { background: #ecebe8; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .gallery .main { border-radius: 12px; width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; }
+  .thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .thumbs button { padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden; background: #fff; cursor: pointer; }
+  .thumbs button[aria-current="true"] { border-color: var(--red); }
+  .thumbs img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .credit { font-size: 12px; color: #6b6b6b; text-align: center; margin: 0; }
+
+  /* Info */
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .info div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .info h3 { margin: 0 0 6px; font-size: 16px; }
+  .info p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; font-size: 15px; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 32px; padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+  footer .logo { font-size: 20px; color: var(--ink); }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 520px) {
+    header nav a:not(:last-child) { display: none; }
+    .hero { padding-top: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="./">ShPower<span>Shop</span></a>
+    <nav>
+      <a href="./">Boutique</a>
+      <a href="#produits">Le coffret</a>
+      <a href="#infos">Infos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="badge" id="badge">Précommande ouverte</span>
+    <span class="stock" id="stock"></span>
+    <h1>4th Anniversary Set</h1>
+    <p>Le <strong>coffret officiel Bandai</strong> des 4 ans du ONE PIECE CARD GAME, vendu sur Premium Bandai. Design signé <strong>GOO CHOKI PAR</strong>, avec <strong>9 cartes promo</strong> au tampon « 4th Anniversary » et tous les accessoires assortis.</p>
+    <div class="prices"><div class="brush black" id="hero-price"></div></div>
+  </div>
+
+  <section id="produits">
+    <div class="product">
+      <div class="gallery">
+        <img class="main" id="main-img" src="img/4th/coffret.jpg" alt="ONE PIECE CARD GAME 4th Anniversary Set">
+        <div class="thumbs">
+            <button type="button" data-src="img/4th/coffret.jpg" aria-label="Coffret" aria-current="true"><img src="img/4th/coffret.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/kizaru.jpg" aria-label="Borsalino"><img src="img/4th/kizaru.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/nami.jpg" aria-label="Nami"><img src="img/4th/nami.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/enel.jpg" aria-label="Enel"><img src="img/4th/enel.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/vivi.jpg" aria-label="Vivi"><img src="img/4th/vivi.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/gorosei.jpg" aria-label="Les Cinq Doyens"><img src="img/4th/gorosei.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/playmat.jpg" aria-label="Playmat"><img src="img/4th/playmat.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/sleeve.jpg" aria-label="Sleeve"><img src="img/4th/sleeve.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/boite-deck.jpg" aria-label="Boîte de rangement"><img src="img/4th/boite-deck.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/4th/boite-deck-ouverte.jpg" aria-label="Boîte ouverte"><img src="img/4th/boite-deck-ouverte.jpg" alt="" loading="lazy"></button>
+        </div>
+        <p class="credit">Visuels officiels Bandai</p>
+      </div>
+      <div class="body">
+        <h2>ONE PIECE CARD GAME 4th Anniversary Set</h2>
+        <p class="meta">Produit officiel Bandai · Premium Bandai · Scellé d'origine</p>
+        <ul class="contents">
+          <li><strong>9 cartes promo</strong> au tampon 4th Anniversary : Monkey D. Luffy, Shanks, Mihawk, Edward Newgate, Nefertari Vivi, Enel, « Les Cinq Doyens », Nami et Borsalino</li>
+          <li><strong>70 sleeves</strong> illustrées</li>
+          <li><strong>1 playmat</strong></li>
+          <li><strong>1 boîte de deck</strong> et <strong>1 boîte de rangement</strong> façon cuir embossé</li>
+        </ul>
+        <p class="meta">Édition anniversaire distribuée uniquement via Premium Bandai, la boutique officielle en ligne de Bandai. Une pièce de collection pensée pour les fans du jeu.</p>
+
+        <div class="zone" role="group" aria-label="Pays de livraison">
+          <button type="button" data-zone="fr" aria-pressed="true">🇫🇷 Livraison en France</button>
+          <button type="button" data-zone="eu" aria-pressed="false">🇪🇺 Livraison en Europe</button>
+        </div>
+        <div class="offers">
+          <div class="offer best">
+            <div>
+              <h3>1 coffret</h3>
+              <p class="meta">Prix à l'unité</p>
+            </div>
+            <span class="price" id="price"></span>
+            <a class="btn red" data-buy="unite" href="#">Précommander le coffret</a>
+          </div>
+        </div>
+        <p class="meta small" id="ship-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="infos">
+    <h2>Infos pratiques</h2>
+    <div class="info">
+      <div><h3>📦 Expédition</h3><p id="ship-date"></p></div>
+      <div><h3>🚚 Livraison</h3><p id="ship-cost"></p></div>
+      <div><h3>🔒 Paiement</h3><p>Paiement sécurisé par carte bancaire (Stripe). Tes coordonnées bancaires ne passent jamais par ce site.</p></div>
+      <div><h3>🛡️ Protection</h3><p>Coffret scellé, calé et protégé dans un carton, envoyé avec suivi.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Questions fréquentes</h2>
+    <details>
+      <summary>C'est quoi une précommande ?</summary>
+      <p>Tu réserves ton coffret maintenant et tu paies à la commande. Il est expédié dès que Bandai nous livre (voir la date d'expédition ci-dessus). Cette date ne dépend pas de nous : en cas de retard de Bandai, tu es prévenu par e-mail. Tu reçois ensuite un e-mail avec le numéro de suivi.</p>
+    </details>
+    <details>
+      <summary>Le produit est-il authentique ?</summary>
+      <p>Oui. C'est le ONE PIECE CARD GAME 4th Anniversary Set, un produit officiel Bandai vendu via Premium Bandai, livré scellé d'origine. Les visuels sont ceux de Bandai ; le filigrane « ShPowerShop » sert uniquement à protéger les images de ce site.</p>
+    </details>
+    <details>
+      <summary>Je peux annuler ma précommande ?</summary>
+      <p>Oui. Tu disposes d'un délai de 14 jours après réception pour te rétracter, et tu peux annuler sans frais tant que le coffret n'a pas été expédié. Écris-nous via le contact ci-dessous.</p>
+    </details>
+    <details>
+      <summary>Comment me contacter ?</summary>
+      <p id="contact"></p>
+    </details>
+  </section>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="logo">ShPower<span style="color:var(--red)">Shop</span></div>
+    <p>Visuels produits © Bandai / Eiichiro Oda / Shueisha, Toei Animation. Vente entre particuliers. ShPowerShop n'est pas affilié à Shueisha, Toei Animation ou Bandai. One Piece est une marque de leurs détenteurs respectifs.</p>
+    <p>Site hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.</p>
+    <p>© <span id="year"></span> ShPowerShop</p>
+  </div>
+</footer>
+
+<script>
+  // ─── À COMPLÉTER ─────────────────────────────────────────────
+  const CONFIG = {
+    prix: null,          // ex. 199 (en euros). Vide = « Prix bientôt ».
+    // Coffrets encore disponibles. Mets 0 quand tout est vendu : le bouton passe en « Épuisé ».
+    stock: null,
+    zones: {
+      fr: { port: "6 €",  liens: { unite: "" } },   // lien Stripe : 1 coffret + livraison France
+      eu: { port: "15 €", liens: { unite: "" } },   // lien Stripe : 1 coffret + livraison UE
+    },
+    dateExpedition: "Date d'expédition bientôt confirmée. Elle est fixée par Bandai et ne dépend pas de nous.",
+    livraison: "Envoi en colis suivi : 6 € en France, 15 € vers les autres pays de l'Union européenne.",
+    contact: { email: "Shintseko@hotmail.com", instagram: "" },
+  };
+  // ─────────────────────────────────────────────────────────────
+
+  const c = CONFIG.contact;
+  const contactUrl = c.instagram ? `https://instagram.com/${c.instagram}` : c.email ? `mailto:${c.email}` : "#faq";
+  const contactParts = [];
+  if (c.email) contactParts.push(`Par e-mail : <a href="mailto:${c.email}">${c.email}</a>`);
+  if (c.instagram) contactParts.push(`Sur Instagram : <a href="https://instagram.com/${c.instagram}" target="_blank" rel="noopener">@${c.instagram}</a>`);
+  document.getElementById("contact").innerHTML = contactParts.join("<br>") || "Coordonnées bientôt disponibles.";
+
+  document.getElementById("ship-date").textContent = CONFIG.dateExpedition;
+  document.getElementById("ship-cost").textContent = CONFIG.livraison;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("price").textContent = CONFIG.prix ? `${CONFIG.prix} €` : "Prix bientôt";
+  document.getElementById("hero-price").textContent = CONFIG.prix ? `${CONFIG.prix}€` : "Bientôt dispo";
+
+  const epuise = CONFIG.stock !== null && CONFIG.stock <= 0;
+  if (!epuise && CONFIG.stock !== null) {
+    const pl = CONFIG.stock > 1 ? "s" : "";
+    document.getElementById("stock").textContent = `Stock limité : ${CONFIG.stock} coffret${pl} disponible${pl}`;
+  }
+  if (epuise) document.getElementById("badge").textContent = "Épuisé";
+
+  // Galerie
+  const mainImg = document.getElementById("main-img");
+  document.querySelectorAll(".thumbs button").forEach(b => b.addEventListener("click", () => {
+    mainImg.src = b.dataset.src;
+    mainImg.alt = b.getAttribute("aria-label");
+    document.querySelectorAll(".thumbs button").forEach(x => x.removeAttribute("aria-current"));
+    b.setAttribute("aria-current", "true");
+  }));
+
+  function choisirZone(zone) {
+    const z = CONFIG.zones[zone];
+    document.querySelectorAll("[data-zone]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.zone === zone)));
+    document.getElementById("ship-note").textContent = `Frais de port (${z.port}) ajoutés au paiement.`;
+    document.querySelectorAll("[data-buy]").forEach(btn => {
+      if (epuise) { btn.textContent = "Épuisé"; btn.classList.add("off"); btn.removeAttribute("href"); return; }
+      const lien = z.liens[btn.dataset.buy];
+      if (lien) {
+        btn.href = lien; btn.target = "_blank"; btn.rel = "noopener";
+        btn.textContent = "Précommander le coffret";
+      } else {
+        btn.href = contactUrl; btn.removeAttribute("target");
+        btn.textContent = "Réserver par e-mail";
+      }
+    });
+  }
+  document.querySelectorAll("[data-zone]").forEach(b => b.addEventListener("click", () => choisirZone(b.dataset.zone)));
+  choisirZone("fr");
+</script>
+
+</body>
+</html>
